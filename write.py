@@ -393,12 +393,13 @@ def updateSheet(sheet, colstart, colend, insertMatrix):
         time.sleep(30)
         addTokenRatioSheets(info, sheet, ratioToken, sheetMatrix)
 
+#method to update price sheet with startprice.py
 def priceSheet(tokenFile, sheetFile):
-    while True:
-        parsedInfo = getMCInfo(tokenFile)
-        insertMatrix = writeToPriceSheet(parsedInfo, sheetFile)
-        print('updated')
-        time.sleep(60*1)
+    # while True:
+    parsedInfo = getMCInfo(tokenFile)
+    insertMatrix = writeToPriceSheet(parsedInfo, sheetFile)
+    # print('updated')
+    # time.sleep(60*1)
 
 def main(tokenFile, sheetFile, ethbtcratios):
     while True:
