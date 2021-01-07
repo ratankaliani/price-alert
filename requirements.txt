@@ -1,0 +1,9 @@
+telegram
+time
+requests
+math
+gspread
+oauth2client.service_account
+pickle
+os.path
+datetime
