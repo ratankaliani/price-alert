@@ -1,6 +1,5 @@
 telegram
 requests
-math
 gspread
 oauth2client.service_account
 pickle
