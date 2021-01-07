@@ -2,5 +2,4 @@ telegram
 requests
 gspread
 oauth2client
-os
 datetime
