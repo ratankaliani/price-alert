@@ -1,5 +1,4 @@
 telegram
-time
 requests
 math
 gspread
