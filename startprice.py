@@ -1,2 +1,2 @@
 import write
-write.priceSheet('tokens.txt', 'DeFi Price Sheet')
+write.priceSheet('tokens.txt', 'Price Sheet')

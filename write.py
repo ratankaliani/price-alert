@@ -7,13 +7,12 @@ import time
 from datetime import datetime, timedelta, date
 from math import log10, floor
 
-spreadsheetid = '1fAGE_pNOn--rgrGd7NUQYUFCaGi7n1h_fTBBx5t519U'
+spreadsheetid = '1KFaLADT75vJKV7tUaTPDm5IYmOwwxfNRlqARpuNJerw'
 # use creds to create a client to interact with the Google Drive API
 scope = ['https://spreadsheets.google.com/feeds',
         'https://www.googleapis.com/auth/drive']
 creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
 client = gspread.authorize(creds)
-exponents = ['K', 'M', 'B', 'T']
 
 def isfloat(value):
   try:
@@ -173,8 +172,8 @@ def writeToPriceSheet(info, sheetFile):
         colstart = chr(ord('@')+1)
         colend = chr(ord('@')+len(insertList))
         rind += 1
-    #sort by 24h change
-    sortedInsertMatrix = sortMatrix(insertMatrix, 3)
+    #sort by token name
+    sortedInsertMatrix = sortMatrix(insertMatrix, 0)
     # print(sortedInsertMatrix)
     updateSheet(sheet, colstart, colend, sortedInsertMatrix)
     for i in range(len(insertMatrix)):
@@ -385,7 +384,7 @@ def addTokenRatioSheets(info, sheet, ratioToken, sheetMatrix):
     updateSheet(sheet, colstart, colend, sortedInsertMatrix)
 
 def sortMatrix(insertMatrix, ind):
-    return sorted(insertMatrix, key = lambda x: x[ind], reverse = True)
+    return sorted(insertMatrix, key = lambda x: x[ind])
 
 def updateSheet(sheet, colstart, colend, insertMatrix):
     try:

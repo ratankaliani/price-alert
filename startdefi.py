@@ -1,5 +1,5 @@
 from write import main
-main('tokens.txt', 'DeFi Price Sheet', True)
+main('tokens.txt', 'Price Sheet', True)
     
 
 

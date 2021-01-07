@@ -1,5 +1,5 @@
 Comp,compound-governance-token
-Aave,ethlend
+Aave,aave
 Synthetix,havven
 Maker,maker
 Balancer,balancer
