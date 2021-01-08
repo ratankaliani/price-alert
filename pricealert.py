@@ -141,14 +141,19 @@ def main():
     chat_id = "-382521543"
     token = "1583616459:AAHG-9054g8ncshTDyr6EN4afHXt5PAtRRs"
     prevCounted = {}
-    while True:
-        symbol_id_token = readIds('tokens.txt')
-        data, prevCounted = getData(symbol_id_token, 5, prevCounted)
-        if data:
-            startBot(token, chat_id, data)
-        #updates every 5 mins
-        sleep(5*60)
-        # sleep(1)
+    # while True:
+    #     symbol_id_token = readIds('tokens.txt')
+    #     data, prevCounted = getData(symbol_id_token, 5, prevCounted)
+    #     if data:
+    #         startBot(token, chat_id, data)
+    #     #updates every 5 mins
+    #     sleep(5*60)
+    #     # sleep(1)
+    symbol_id_token = readIds('tokens.txt')
+    data, prevCounted = getData(symbol_id_token, 5, prevCounted)
+    if data:
+        startBot(token, chat_id, data)
+
 main()
 
 
